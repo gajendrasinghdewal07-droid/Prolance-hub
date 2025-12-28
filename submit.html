@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Submission</title>
+<style>
+    body {font-family: Arial, sans-serif; background:#0f0f0f; color:#fff; margin:0; padding:20px;}
+    h1 {text-align:center; margin-bottom:20px;}
+    form {max-width:600px; margin:0 auto; background:#1f1f1f; padding:20px; border-radius:12px;}
+    label {display:block; margin-top:15px;}
+    input, select, textarea {width:100%; padding:10px; border-radius:6px; border:none; margin-top:5px;}
+    button {margin-top:20px; padding:12px; width:100%; background:#3a3a3a; color:#fff; border:none; border-radius:8px; cursor:pointer;}
+    button:hover {background:#555;}
+    p.price {margin-top:10px; font-weight:bold; text-align:center;}
+</style>
+</head>
+<body>
+
+<h1>Submit Your Project</h1>
+<form id="projectForm">
+    <label for="clientName">Name</label>
+    <input type="text" id="clientName" name="clientName" required>
+
+    <label for="clientEmail">Email</label>
+    <input type="email" id="clientEmail" name="clientEmail" required>
+
+    <label for="serviceType">Service Type</label>
+    <select id="serviceType" name="serviceType" onchange="updatePrice()" required>
+        <option value="">--Select Service--</option>
+        <option value="video">Video Editing</option>
+        <option value="web">Web Development</option>
+        <option value="copywriting">Copywriting</option>
+        <option value="script">Script Writing</option>
+        <option value="animation">Animation / Graphic Design</option>
+        <option value="thumbnails">Thumbnails / Images</option>
+    </select>
+
+    <label for="subCategory">Sub-Category / Details</label>
+    <select id="subCategory" name="subCategory" onchange="updatePrice()" required>
+        <option value="">--Select Sub-Category--</option>
+    </select>
+
+    <p class="price">Price: <span id="priceDisplay">-</span></p>
+
+    <label for="requirements">Project Requirements / Details</label>
+    <textarea id="requirements" name="requirements" rows="5" placeholder="Describe your project..." required></textarea>
+
+    <button type="submit">Submit Project</button>
+</form>
+
+<script>
+const subCategories = {
+    video: ["Short Video (0–2 min)", "Medium Video (2–5 min)", "Long Video (30–50 min)"],
+    web: ["Landing Page", "Full Website", "E-commerce Website"],
+    copywriting: ["Social Media Post", "Blog / Article"],
+    script: ["Video Script (PDF)", "Ad / Commercial Script (PDF)"],
+    animation: ["2D Animation (.mp4)", "Motion Graphics (.mp4)"],
+    thumbnails: ["YouTube / Social Media Thumbnails (.jpg)"]
+};
+
+const pricing = {
+    "Short Video (0–2 min)": "₹500 – 1,000",
+    "Medium Video (2–5 min)": "₹1,000 – 2,500",
+    "Long Video (30–50 min)": "₹8,000 – 20,000",
+    "Landing Page": "₹3,000 – 8,000",
+    "Full Website": "₹8,000 – 25,000",
+    "E-commerce Website": "₹15,000 – 35,000",
+    "Social Media Post": "₹300 – 800 per post",
+    "Blog / Article": "₹800 – 2,500",
+    "Video Script (PDF)": "₹500 – 1,500",
+    "Ad / Commercial Script (PDF)": "₹1,500 – 5,000",
+    "2D Animation (.mp4)": "₹3,000 – 8,000",
+    "Motion Graphics (.mp4)": "₹2,000 – 6,000",
+    "YouTube / Social Media Thumbnails (.jpg)": "₹150 – 500 each"
+};
+
+const serviceSelect = document.getElementById('serviceType');
+const subCategorySelect = document.getElementById('subCategory');
+const priceDisplay = document.getElementById('priceDisplay');
+
+serviceSelect.addEventListener('change', () => {
+    const options = subCategories[serviceSelect.value] || [];
+    subCategorySelect.innerHTML = '<option value="">--Select Sub-Category--</option>';
+    options.forEach(sub => {
+        const opt = document.createElement('option');
+        opt.value = sub;
+        opt.textContent = sub;
+        subCategorySelect.appendChild(opt);
+    });
+    priceDisplay.textContent = "-";
+});
+
+function updatePrice() {
+    const subCat = subCategorySelect.value;
+    priceDisplay.textContent = pricing[subCat] || "-";
+}
+
+// Form submission (Example: just alert, replace with your email / backend)
+document.getElementById('projectForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Project submitted! We will contact you soon.');
+});
+</script>
+
+</body>
+</html>

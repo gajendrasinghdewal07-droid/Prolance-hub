@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback - PROLANCE HUB</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">PROLANCE HUB</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="submit.html">Submit Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="feedback-page">
+    <section class="feedback-section">
+      <h2>Share Your Feedback</h2>
+      <form id="feedbackForm" class="feedback-form">
+        <label for="fbName">Name</label>
+        <input id="fbName" type="text" required />
+
+        <label>Rating</label>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        </div>
+
+        <label for="fbMessage">Your Feedback</label>
+        <textarea id="fbMessage" rows="4" required></textarea>
+
+        <button type="submit" class="cta-button">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 PROLANCE HUB. All rights reserved.</p></footer>
+</body>
+</html>
