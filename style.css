@@ -8,31 +8,8 @@
 body {
   scroll-behavior: smooth;
   line-height: 1.6;
-}
-
-/* NAVBAR */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #0f0f0f;
-  padding: 12px 20px;
-  display: flex;
-  gap: 15px;
-  z-index: 1000;
-}
-
-.navbar button {
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.navbar button.active,
-.navbar button:hover {
-  color: #00ff99;
+  background: #fff;
+  color: #000;
 }
 
 /* SECTIONS */
@@ -49,58 +26,31 @@ body {
   transform: translateY(0);
 }
 
-.section.dark {
-  background: #111;
-  color: #fff;
-}
-
 /* CARDS */
 .cards {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 .card {
-  background: #f3f3f3;
+  background: #f0e6fa; /* light lavender/pinkish */
   padding: 20px;
   border-radius: 8px;
   flex: 1;
-  min-width: 120px;
+  min-width: 200px;
   text-align: center;
 }
 
-/* PRICING */
-.pricing {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.plan {
-  background: #f3f3f3;
-  padding: 15px;
-  text-align: center;
-  border-radius: 8px;
-  flex: 1;
-  min-width: 120px;
-}
-
-.plan.featured {
-  background: #0f0f0f;
-  color: #fff;
-}
-
-.plan button {
-  margin-top: 10px;
-  padding: 6px 12px;
-  border: none;
-  cursor: pointer;
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 8px;
 }
 
 /* FORM */
 form {
-  max-width: 320px;
+  max-width: 400px;
   margin-top: 15px;
 }
 
@@ -116,7 +66,19 @@ form button {
 }
 
 form button {
-  background: #00ff99;
+  background: #DA70D6; /* pinkish-purple / lavender */
   border: none;
   cursor: pointer;
+  font-weight: bold;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+.social-icons img {
+  width: 32px;
+  height: 32px;
 }

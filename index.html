@@ -2,73 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PROLANCE HUB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROLANCE HUB</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <button onclick="go('home')">Home</button>
-  <button onclick="go('services')">Services</button>
-  <button onclick="go('pricing')">Pricing</button>
-  <button onclick="go('submit')">Submit</button>
-  <button onclick="go('contact')">Contact</button>
-</nav>
-
-<!-- HOME -->
+<!-- HOME / ABOUT US -->
 <section id="home" class="section">
   <h1>PROLANCE HUB</h1>
-  <p>Professional Digital Services Platform</p>
+  <p>Transform your raw footage into stunning videos.<br>
+  Make your YouTube channel stand out with eye-catching thumbnails.<br>
+  Professional Video Editing & Thumbnail Design for content creators.</p>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section dark">
+<section id="services" class="section">
   <h2>Our Services</h2>
   <div class="cards">
-    <div class="card">Web Development</div>
-    <div class="card">Graphic Design</div>
-    <div class="card">Video Editing</div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="section">
-  <h2>Pricing Plans</h2>
-  <div class="pricing">
-    <div class="plan">
-      <h3>Basic</h3>
-      <p class="price">₹999</p>
-      <button onclick="openForm('Basic')">Choose</button>
+    <div class="card">
+      <img src="assets/video-editing.png" alt="Video Editing">
+      <h3>Video Editing</h3>
+      <p>Professional video cutting, trimming & transitions.<br>
+      Color correction, audio sync & effects.<br>
+      Perfect for YouTube, Instagram & promotional videos.</p>
     </div>
-    <div class="plan featured">
-      <h3>Standard</h3>
-      <p class="price">₹2499</p>
-      <button onclick="openForm('Standard')">Choose</button>
-    </div>
-    <div class="plan">
-      <h3>Premium</h3>
-      <p class="price">₹4999</p>
-      <button onclick="openForm('Premium')">Choose</button>
+    <div class="card">
+      <img src="assets/thumbnail-design.png" alt="Thumbnail Design">
+      <h3>Thumbnail Design</h3>
+      <p>Eye-catching custom thumbnails.<br>
+      Boost clicks & engagement instantly.<br>
+      Unique designs for your brand identity.</p>
     </div>
   </div>
 </section>
 
-<!-- SUBMIT -->
-<section id="submit" class="section dark">
-  <h2>Submit Your Project</h2>
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+  <h2>Our Portfolio</h2>
+  <p>See how we’ve transformed videos & created thumbnails that stand out.</p>
+  <div class="cards">
+    <div class="card"><img src="assets/portfolio1.jpg" alt="Project 1"><p>Project 1</p></div>
+    <div class="card"><img src="assets/portfolio2.jpg" alt="Project 2"><p>Project 2</p></div>
+    <div class="card"><img src="assets/portfolio3.jpg" alt="Project 3"><p>Project 3</p></div>
+    <div class="card"><img src="assets/portfolio4.jpg" alt="Project 4"><p>Project 4</p></div>
+  </div>
+</section>
+
+<!-- SUBMIT / ORDER FORM -->
+<section id="submit" class="section">
+  <h2>Submit Your Project & Get Started</h2>
+  <p>Select your service and duration, describe your project, and we’ll handle the rest.</p>
   <form id="orderForm">
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Email" required>
-
-    <select id="planSelect" required>
-      <option value="">Select Plan</option>
-      <option>Basic</option>
-      <option>Standard</option>
-      <option>Premium</option>
+    <select id="serviceSelect" required>
+      <option value="">Select Service</option>
+      <option value="Video Editing">Video Editing</option>
+      <option value="Thumbnail Design">Thumbnail Design</option>
     </select>
-
+    <select id="planSelect" required>
+      <option value="">Select Duration</option>
+      <option value="Short">Short</option>
+      <option value="Medium">Medium</option>
+      <option value="Long">Long</option>
+    </select>
     <textarea placeholder="Project Details" required></textarea>
     <button type="submit">Submit</button>
   </form>
@@ -76,8 +74,14 @@
 
 <!-- CONTACT -->
 <section id="contact" class="section">
-  <h2>Contact</h2>
+  <h2>Get in Touch</h2>
+  <p>We reply within 24 hours. Let’s make something amazing together!</p>
   <p>Email: prolancehub@gmail.com</p>
+  <div class="social-icons">
+    <img src="assets/youtube.png" alt="YouTube">
+    <img src="assets/instagram.png" alt="Instagram">
+    <img src="assets/linkedin.png" alt="LinkedIn">
+  </div>
 </section>
 
 <script src="script.js"></script>
