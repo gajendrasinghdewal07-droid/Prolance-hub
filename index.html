@@ -4,34 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PROLANCE HUB</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <script src="js/script.js" defer></script>
+
+  <!-- CSS FILE (same repo root me honi chahiye) -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">PROLANCE HUB</div>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="submit.html">Submit Project</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to PROLANCE HUB</h1>
-      <p>Your one-stop destination for creative digital services.</p>
-      <a href="submit.html" class="cta-button">Start Your Project</a>
-    </div>
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#submit">Submit Project</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home">
+    <h1>Welcome to <span>PROLANCE HUB</span></h1>
+    <p>Your one-stop destination for creative digital services.</p>
+    <button onclick="startProject()">Start Your Project</button>
   </section>
 
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Web Development</li>
+      <li>Graphic Design</li>
+      <li>Video Editing</li>
+      <li>Digital Marketing</li>
+    </ul>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Our best works will appear here.</p>
+  </section>
+
+  <!-- SUBMIT PROJECT -->
+  <section id="submit">
+    <h2>Submit Your Project</h2>
+    <p>Email us your requirements.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: prolancehub@gmail.com</p>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section id="feedback">
+    <h2>Feedback</h2>
+    <p>Your feedback matters to us.</p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 PROLANCE HUB. All rights reserved.</p>
+    <p>© 2025 PROLANCE HUB. All rights reserved.</p>
   </footer>
+
+  <!-- JS FILE (same repo root me honi chahiye) -->
+  <script src="script.js"></script>
 </body>
 </html>
