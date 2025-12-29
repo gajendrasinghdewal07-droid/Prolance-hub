@@ -1,108 +1,122 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0e0e0e;
-    color: #ffffff;
-    min-height: 100vh;
+  scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 28px;
-    letter-spacing: 1px;
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0f0f0f;
+  padding: 12px 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
 }
 
+.navbar button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navbar button.active,
+.navbar button:hover {
+  color: #00ff99;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section.dark {
+  background: #111;
+  color: #fff;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f3f3f3;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* PRICING */
+.pricing {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: #f3f3f3;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.plan.featured {
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.plan button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* FORM */
 form {
-    max-width: 620px;
-    margin: auto;
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  max-width: 320px;
+  margin-top: 15px;
 }
 
-label {
-    display: block;
-    margin-top: 15px;
-    font-size: 14px;
-    opacity: 0.9;
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-input,
-select,
-textarea {
-    width: 100%;
-    margin-top: 6px;
-    padding: 11px;
-    background: #2a2a2a;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 14px;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: #aaa;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    background: #333;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.price {
-    margin-top: 15px;
-    padding: 10px;
-    background: #111;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.price span {
-    color: #00ff9d;
-}
-
-button {
-    margin-top: 25px;
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #00ff9d, #00b36b);
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #000;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(135deg, #00e68a, #00995c);
-}
-
-@media (max-width: 600px) {
-    form {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 22px;
-    }
+form button {
+  background: #00ff99;
+  border: none;
+  cursor: pointer;
 }

@@ -1,75 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>PROLANCE HUB</title>
-
-  <!-- CSS FILE (same repo root me honi chahiye) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#submit">Submit Project</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#feedback">Feedback</a></li>
-    </ul>
-  </nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <button onclick="go('home')">Home</button>
+  <button onclick="go('services')">Services</button>
+  <button onclick="go('pricing')">Pricing</button>
+  <button onclick="go('submit')">Submit</button>
+  <button onclick="go('contact')">Contact</button>
+</nav>
 
-  <!-- HERO SECTION -->
-  <section id="home">
-    <h1>Welcome to <span>PROLANCE HUB</span></h1>
-    <p>Your one-stop destination for creative digital services.</p>
-    <button onclick="startProject()">Start Your Project</button>
-  </section>
+<!-- HOME -->
+<section id="home" class="section">
+  <h1>PROLANCE HUB</h1>
+  <p>Professional Digital Services Platform</p>
+</section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Web Development</li>
-      <li>Graphic Design</li>
-      <li>Video Editing</li>
-      <li>Digital Marketing</li>
-    </ul>
-  </section>
+<!-- SERVICES -->
+<section id="services" class="section dark">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Web Development</div>
+    <div class="card">Graphic Design</div>
+    <div class="card">Video Editing</div>
+  </div>
+</section>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>Our best works will appear here.</p>
-  </section>
+<!-- PRICING -->
+<section id="pricing" class="section">
+  <h2>Pricing Plans</h2>
+  <div class="pricing">
+    <div class="plan">
+      <h3>Basic</h3>
+      <p class="price">₹999</p>
+      <button onclick="openForm('Basic')">Choose</button>
+    </div>
+    <div class="plan featured">
+      <h3>Standard</h3>
+      <p class="price">₹2499</p>
+      <button onclick="openForm('Standard')">Choose</button>
+    </div>
+    <div class="plan">
+      <h3>Premium</h3>
+      <p class="price">₹4999</p>
+      <button onclick="openForm('Premium')">Choose</button>
+    </div>
+  </div>
+</section>
 
-  <!-- SUBMIT PROJECT -->
-  <section id="submit">
-    <h2>Submit Your Project</h2>
-    <p>Email us your requirements.</p>
-  </section>
+<!-- SUBMIT -->
+<section id="submit" class="section dark">
+  <h2>Submit Your Project</h2>
+  <form id="orderForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email" required>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: prolancehub@gmail.com</p>
-  </section>
+    <select id="planSelect" required>
+      <option value="">Select Plan</option>
+      <option>Basic</option>
+      <option>Standard</option>
+      <option>Premium</option>
+    </select>
 
-  <!-- FEEDBACK -->
-  <section id="feedback">
-    <h2>Feedback</h2>
-    <p>Your feedback matters to us.</p>
-  </section>
+    <textarea placeholder="Project Details" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 PROLANCE HUB. All rights reserved.</p>
-  </footer>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: prolancehub@gmail.com</p>
+</section>
 
-  <!-- JS FILE (same repo root me honi chahiye) -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
