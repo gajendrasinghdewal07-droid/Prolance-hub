@@ -3,26 +3,32 @@
     padding:0;
     box-sizing:border-box;
     font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f5f5f5;
-    color:#111;
+    background:#f7f7f7;
+    color:#222;
     line-height:1.6;
 }
 
+/* SITE123 STYLE CONTAINER */
+
 .container{
-    width:90%;
-    max-width:1200px;
+    width:92%;
+    max-width:1180px;
     margin:auto;
 }
 
+/* HEADER */
+
 header{
-    background:#4a0638;
+    background:white;
     padding:18px 0;
     position:sticky;
     top:0;
     z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
 }
 
 .navbar{
@@ -32,116 +38,166 @@ header{
 }
 
 .logo{
-    color:white;
+    color:#4a0638;
     font-size:28px;
+    font-weight:700;
+    letter-spacing:0.5px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
 }
 
 nav a{
-    color:white;
+    color:#333;
     text-decoration:none;
-    margin-left:20px;
-    font-size:16px;
+    margin-left:24px;
+    font-size:15px;
+    font-weight:600;
+    transition:0.3s;
 }
 
+nav a:hover{
+    color:#4a0638;
+}
+
+/* HERO */
+
 .hero{
-    height:90vh;
-    background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    min-height:92vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop');
+    background-position:center;
+    background-size:cover;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
+    padding:40px 20px;
 }
 
 .hero-content{
-    background:rgba(255,255,255,0.92);
-    padding:40px;
-    border-radius:20px;
-    max-width:600px;
+    background:white;
+    padding:55px 45px;
+    border-radius:18px;
+    max-width:720px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.18);
 }
 
 .hero-content h2{
-    font-size:52px;
-    margin-bottom:15px;
+    font-size:56px;
+    margin-bottom:18px;
+    line-height:1.1;
+    color:#222;
 }
 
 .hero-content p{
     font-size:20px;
-    margin-bottom:25px;
+    color:#555;
+    margin-bottom:32px;
 }
 
 .btn{
     display:inline-block;
     background:#4a0638;
     color:white;
-    padding:12px 28px;
-    border-radius:8px;
+    padding:14px 34px;
+    border-radius:6px;
     text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
 }
+
+.btn:hover{
+    background:#65084d;
+    transform:translateY(-2px);
+}
+
+/* ABOUT */
 
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
+    gap:60px;
     align-items:center;
-    padding:80px 0;
+    padding:100px 0;
 }
 
 .about-image img{
     width:100%;
-    border-radius:20px;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
 }
 
 .about-text h2{
-    font-size:42px;
-    margin-bottom:20px;
+    font-size:46px;
+    margin-bottom:22px;
+    line-height:1.2;
+    color:#222;
 }
 
 .about-text p{
-    margin-bottom:25px;
+    margin-bottom:28px;
     font-size:18px;
+    color:#666;
 }
 
 .tags{
     display:flex;
     flex-wrap:wrap;
-    gap:12px;
+    gap:14px;
 }
 
 .tags span{
-    background:#4a0638;
-    color:white;
+    background:white;
+    color:#4a0638;
+    border:1px solid #ddd;
     padding:10px 18px;
-    border-radius:8px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    transition:0.3s;
 }
 
+.tags span:hover{
+    background:#4a0638;
+    color:white;
+}
+
+/* SERVICES */
+
 .services{
-    padding:80px 0;
+    padding:100px 0;
     background:white;
 }
 
 .section-title{
     text-align:center;
-    font-size:42px;
-    margin-bottom:50px;
+    font-size:46px;
+    margin-bottom:60px;
+    color:#222;
 }
 
 .service-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:35px;
 }
 
 .card{
-    background:#f5f5f5;
-    border-radius:20px;
+    background:white;
+    border-radius:16px;
     overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    transition:0.35s;
+    border:1px solid #eee;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
+    box-shadow:0 14px 35px rgba(0,0,0,0.12);
 }
 
 .card img{
@@ -151,65 +207,86 @@ nav a{
 }
 
 .card h3{
-    padding:20px 20px 10px;
+    padding:24px 24px 12px;
     font-size:28px;
+    color:#222;
 }
 
 .card p{
-    padding:0 20px 25px;
+    padding:0 24px 30px;
+    color:#666;
+    font-size:16px;
 }
+
+/* CONTACT */
 
 .contact{
     background:#4a0638;
     color:white;
     text-align:center;
-    padding:60px 20px;
+    padding:90px 20px;
 }
 
 .contact h2{
-    margin-bottom:20px;
-    font-size:40px;
+    margin-bottom:24px;
+    font-size:46px;
 }
 
+.contact p{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+/* FOOTER */
+
 footer{
-    background:#2d0222;
+    background:#2a0220;
     color:white;
     text-align:center;
-    padding:18px;
+    padding:22px;
+    font-size:15px;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
     .navbar{
         flex-direction:column;
-        gap:15px;
+        gap:14px;
     }
 
     nav{
-        display:flex;
         flex-wrap:wrap;
         justify-content:center;
     }
 
     nav a{
-        margin:5px 10px;
+        margin:6px 10px;
+        font-size:14px;
     }
 
     .hero{
-        height:auto;
-        padding:100px 20px;
+        min-height:auto;
+        padding:110px 20px;
+    }
+
+    .hero-content{
+        padding:40px 25px;
     }
 
     .hero-content h2{
-        font-size:36px;
+        font-size:38px;
     }
 
     .hero-content p{
-        font-size:18px;
+        font-size:17px;
     }
 
     .about{
         grid-template-columns:1fr;
+        gap:40px;
+        padding:70px 0;
     }
 
     .about-text h2{
@@ -217,10 +294,14 @@ footer{
     }
 
     .section-title{
-        font-size:34px;
+        font-size:36px;
     }
 
     .card h3{
         font-size:24px;
+    }
+
+    .contact h2{
+        font-size:36px;
     }
 }
